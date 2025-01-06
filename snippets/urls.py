@@ -8,7 +8,8 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('snippets/', views.SnippetList.as_view()),
     path('snippets/<int:pk>/', views.SnippetDetail.as_view()),
-
+    path('', views.api_root),
+    path('snippets/<int:pk>/highlight/', views.SnippetHighlight.as_view()),
 
 ]
 
