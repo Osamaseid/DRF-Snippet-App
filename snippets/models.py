@@ -6,11 +6,7 @@ from pygments.formatters.html import HtmlFormatter
 from pygments import highlight       
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
-
-# Create a sorted list of language choices for the dropdown in forms
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
-
-# Create a sorted list of style choices for the dropdown in forms
 STYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])
 
 class Snippet(models.Model):
